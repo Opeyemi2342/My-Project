@@ -557,8 +557,17 @@
   .mb-auto {
     margin-bottom: auto;
   }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
+  }
   .ml-20 {
     margin-left: calc(var(--spacing) * 20);
+  }
+  .ml-100 {
+    margin-left: calc(var(--spacing) * 100);
   }
   .block {
     display: block;

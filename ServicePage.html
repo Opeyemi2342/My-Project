@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="border-b border-transparent bg-transparent mt-3">
+            <div class="flex justify-between mb-3 w-full md:text-2xl gap-3">
+                <div class="ml-10">
+                    <h1 class="font-extrabold text-lg md:text-2xl  font-serif text-amber-900">THE GLOSS STUDIO</h1>
+                </div>
+
+                <div class="mr-20 space-x-5 lg:block items-center md:text-sm">
+                    <a href="./Homepage.html" class="hover:text-amber-900 hover:underline text-xs">Home</a>
+                    <a href="./index.html" class="hover:text-amber-900 hover:underline text-xs">About</a>
+                    <a href="./ServicePage.html" class="hover:text-amber-900 hover:underline text-xs">Services</a>
+                    <a href="" class="hover:text-amber-900 hover:underline text-xs">Shop</a>
+                    <a href="" class="hover:text-amber-900 hover:underline text-xs">Portfolio</a>
+                    <a href="" class="hover:text-amber-900 hover:underline text-xs">Booking Cart</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-stone-400 p-6">
+
+            <div class=" border-b border-b-amber-950">
+                <div class="mb-5">
+                    <h3 class="font-mono mb-3 text-amber-950">THE SALON CATALOG</h3>
+                    <h2 class="md:text-4xl text-2xl font-serif">Curated Services & Styling</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2">
+                    <div class="">
+                        <div class="space-x-3 mb-5 space-y-2">
+                            <button class="category-btn border px-5 py-1.5 bg-amber-950 text-white border-amber-950" data-filter="all">All
+                                Treatments</button>
+                            <button class="category-btn border px-5 py-1.5 bg-white" data-filter="hair-braids">Hair & Braids</button>
+                            <button class="category-btn border px-5 py-1.5 bg-white" data-filter="luxury-grooming">Luxury Grooming</button>
+                            <button class="category-btn border px-5 py-1.5 bg-white" data-filter="makeup">Makeup Artisty</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="hair-braids">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">HAIR DESIGN</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif md:text-4xl text-2xl font-semibold">Knotless Braids</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">4 hrs</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">50,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Meticulusly parted, lightweight, and tension-free protective styling.
+                        Includes wash and blow-out.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+               <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="hair-braids">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">HAIR DESIGN</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Silk Press & Treatment</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">1 hr 30 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">15,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Premium hydration treatment, precision blow-out, silk press, and heat protection with a healthy ends trim.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+                
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="hair-braids">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                           <a href="#Hairs & Braids"><p class="border px-5 bg-stone-300 text-amber-950 font-semibold">HAIR DESIGN</p></a>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Boho Box Braids</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">4 hrs 30 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">55,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Knotless braids with beautiful curly strands woven throughout for a soft bohemian look. Premium hair included.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="hair-braids">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">HAIR DESIGN</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Sleek Ponytail or Updo</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">1 hr 15 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">10,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Super sleek, styled ponytail or high bun with personalized edge-styling and shine treatment.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="luxury-grooming">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">GROOMING</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Master Cut & Design</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">1 hr</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">20,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Precision haircut tailored to your hair texture and head shape, finished with professional styling, razor neck clean-up, and hot towel.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="luxury-grooming">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">GROOMING</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Beard Sculpting & Steam</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">45 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">10,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Meticulusly parted, lightweight, and tension-free protective styling.
+                        Includes wash and blow-out.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card" data-category="luxury-grooming">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">GROOMING</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">The Gloss Signature Grooming</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">1 hr 30 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">50,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Full premium experience combining the Master cut, Beard Sculpting, botanical scalp massage, and a clarifying charcoal mask.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">COLOR TREATMENTS</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Full Hand-Painted Balayage</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">3 hrs</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">60,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Indiviually painted highlights tailored to your natural movement and skin tone. Includes professional gloss, toning, and blowout.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">COLOR TREATMENTS</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Olaplex Bond Repair Therapy</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">45 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">30,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Patended bond-building treatment to restore compromised hair, rebuild strength, and protect aganist heat and color damage.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+
+                <div class="bg-white p-5 relative border-b border-b-amber-950 mb-5 treatment-card">
+                    <div class="absolute right-0 top-0 bg-[#c4aa7d] px-7 py-2">
+                        <p class="text-sm font-semibold">FEATURED CRAFT</p>
+                    </div>
+                    <div class="flex justify-between mt-6 mb-5">
+                        <div>
+                            <p class="border px-5 bg-stone-300 text-amber-950 font-semibold">COLOR TREATMENT</p>
+                        </div>
+                        <i class="fa-solid fa-scissors text-[#c4aa7d]"></i>
+                    </div>
+
+                    <h1 class="mt-10 font-serif  md:text-4xl text-2xl font-semibold">Moisture Retention Steaming</h1>
+
+                    <div class="mt-5 flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i class="fa-regular fa-clock text-xl text-[#c4aa7d]"></i>
+                            <span class=" text-lg">45 mins</span>
+                        </div>
+                        <i class="fa-solid fa-naira-sign text-lg text-[#8b7554]">25,000</i>
+                    </div>
+
+                    <p class="mt-10 text-lg">Deep-conditioning herbal steam treatment to open cuticles and lock in intense hydration. Excellent for curly, coily, and dehydrated hair.
+                    </p>
+
+                    <div class="my-12 border-t border-t-amber-950"></div>
+
+                    <button class="flex w-full items-center justify-center gap-4 px-8 py-4 text-lg font-semibold border text-white bg-black">ADD TO BOOKING CART</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section class="bg-[#3A2418] text-white">
+        <div class="mb-10 grid lg:grid-cols-5 gap-8 border-b border-stone-700 pb-10 lg:p-10">
+            <div>
+                <div class="lg:border-r border-stone-700 p-5">
+                    <h3 class="font-semibold mb-3">ABOUT</h3>
+                    <ul class="space-y-2">
+                        <li><a href="">Our Story</a></li>
+                        <li><a href="">Meet the Team</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Testimonials</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="lg:border-r border-stone-700 p-5">
+                    <h3 class="font-semibold mb-3">SERVICES</h3>
+                    <ul class="space-y-2">
+                        <li><a href="">Hair Styling</a></li>
+                        <li><a href="">Makeup Studio</a></li>
+                        <li><a href="">Men's Grooming</a></li>
+                        <li><a href="">Beauty Packages</a></li>
+                        <li><a href="">Bridal Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lg:border-r border-stone-700 p-5">
+                <div class="">
+                    <h3 class="font-semibold mb-3">SOCIAL MEDIA</h3>
+                    <p class="text-sm">Stay connected with us for beauty inspiration, client transformations, exclusive offers, and styling tips</p>
+                </div>
+
+                <div class="space-x-1">
+                   <i class="fa-brands fa-instagram"></i> 
+                   <i class="fa-brands fa-facebook"></i>
+                   <i class="fa-brands fa-tiktok"></i>
+                   <i class="fa-brands fa-pinterest"></i>
+                   <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+            <div>
+                <div class="lg:border-r border-stone-700 p-5">
+                    <h3 class="font-semibold mb-3">CUSTOMER CARE</h3>
+                    <ul class="space-y-2">
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Book an Appointment</a></li>
+                        <li><a href="">Gift Cards</a></li>
+                        <li><a href="">Loyalty Rewards</a></li>
+                        <li><a href="">Support Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="p-5">
+                    <h3 class="font-semibold mb-3">POLICIES</h3>
+                    <ul class="space-y-2">
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Refund Policy</a></li>
+                        <li><a href="">Booking Policy</a></li>
+                        <li><a href="">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:flex space-x-10 lg:p-10 p-5 border-b border-stone-700">
+            <div class="lg:border-r md:border-b border-stone-700 px-2">
+                <div class="mb-3">
+                    <h2>CONTACT</h2>
+                </div>
+
+                <div class="flex space-x-3 mb-3">
+                    <div>
+                      <i class="fa-solid fa-location-dot"></i>  
+                    </div>
+                    <p class="text-xs md:text-sm">19, Ayo Elegbede Street, Lagos, Nigeria.</p>
+                </div>
+
+                <div class="flex space-x-3 mb-3">
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <a href="" class="text-xs md:text-sm">09029332360</a>
+                </div>
+
+                <div class="flex space-x-3 mb-3">
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <a href="" class="text-xs md:text-sm">adegbesanopeyemi55@gmail.com</a>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h2 class="mb-3">STAY BEAUTIFUL, STAY HANDSOME, STAY INSPIRED.</h2>
+                    <p class="mb-3 text-xs md:text-sm">Get exclusive offers, new services updates, and beauty tips delivered to your inpox</p>
+                </div>
+
+                <div class="sm:flex gap-2 space-y-2">
+                    <div class="mt-4">
+                        <input type="email"  name="email" id="" placeholder="Enter your email address" class="border border-stone-700 px-10 py-2 rounded-lg">
+                    </div>
+
+                       <button class="border px-5 rounded-lg bg-yellow-800 border-stone-700 text-white hover:bg-yellow-900 sm:mt-2">Subscribe</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col-3 justify-between p-10">
+            <div class="text-xs">
+                &copy; 2026 The Gloss Studio. All Rights Reserved.
+            </div>
+
+            <div class="text-xs">
+                <div class="flex gap-5">
+                    <p class="px-5 border-r border-stone-700">Privacy Policy</p>
+                    <p class="px-5 border-r border-stone-700">Terms of Service</p>
+                    <p >Cookies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <script src="./Javascript Folders/Services.js"></script>
+</body>
+
+</html>
