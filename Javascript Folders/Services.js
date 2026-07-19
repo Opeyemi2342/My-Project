@@ -7,7 +7,7 @@ const treatmentCard = document.querySelectorAll(".treatment-card");
 // Loop through every category button
 categoryButtons.forEach(button => {
     button.addEventListener("click", () => {
-        
+
         //Get the category clicked
         const selectedCategory = button.dataset.filter;
 
@@ -32,7 +32,7 @@ categoryButtons.forEach(button => {
 
         // Remove active styling from all buttons
         categoryButtons.forEach(btn => {
-            
+
             btn.classList.remove(
                 "bg-black",
                 "text-white"
@@ -45,4 +45,21 @@ categoryButtons.forEach(button => {
             "text-black"
         );
     });
+
+    const categoryButtons = document.querySelectorAll(".category-btn");
+
+    categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            //Reset every button
+            categoryButtons.forEach((btn) => {
+                btn.classList.remove("bg-black", "text-white");
+                btn.classList.add("bg-white", "text-black");
+            });
+
+            //Style the clicked button
+            button.classList.remove("bg-white", "text-black");
+            button.classList.add("bg-amber-950", "text-white")
+        })
+    })
 });
+
