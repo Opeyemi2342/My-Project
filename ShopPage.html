@@ -37,15 +37,27 @@
             </div>
 
             <div class="p-5">
-                <div class="flex mb-5">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-semibold">Recommended Products</h3>
+                <div class="flex flex-col sm:flex-row items-center justify-between mb-5 gap-4">
+                    <h3 class="text-lg font-semibold">Recommended Products</h3>
+
+                    <div class="flex items-center gap-4">
+                        <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()"
+                            class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 focus:outline-none focus-within:ring-2 focus:ring-amber-900 bg-white">
+
+                        <button onclick="showAllProducts()"
+                            class="text-lg font-semibold hover:text-amber-900 focus:outline-none cursor-pointer">See
+                            all</button>
+
                     </div>
-                    <a href="" class="text-lg font-semibold hover:text-amber-900">See all</a>
+
                 </div>
 
-                <div class="grid grid-cols-4 gap-8">
-                    <div>
+
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <div id="notFoundMessage" class="hidden text-center py-16">
+                        <p class="text-2xl font-bold text-gray-800 font-serif">Item not found</p>
+                    </div>
+                    <div class="">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/mascara.png" alt="" class="rounded-xl">
@@ -60,12 +72,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Make Up foundation.png" alt="" class="rounded-xl">
@@ -80,12 +92,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/hot comb.png" alt="" class="rounded-xl">
@@ -100,12 +112,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/expression.attachment.png" alt="" class="rounded-xl">
@@ -120,12 +132,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Bodywave.png" alt="" class="rounded-xl">
@@ -140,12 +152,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/blush2.png" alt="" class="rounded-xl">
@@ -160,15 +172,15 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
+                            <img src="./src/eyeliner1.png" alt="" class="rounded-xl">
                             <div>
-                                <img src="./src/eyeliner1.png" alt="" class="rounded-xl h-40">
                             </div>
 
                             <div>
@@ -180,15 +192,15 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
+                            <img src="./src/lushrelaxer.png" alt="" class="rounded-xl">
                             <div>
-                                <img src="./src/lushrelaxer.png" alt="" class="rounded-xl">
                             </div>
 
                             <div>
@@ -200,12 +212,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Edge control.png" alt="" class="rounded-xl">
@@ -220,12 +232,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Bonestraight.png" alt="" class="rounded-xl">
@@ -240,12 +252,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/deepcurls.png" alt="" class="rounded-xl">
@@ -260,12 +272,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/CLosure.jpg" alt="" class="rounded-xl">
@@ -280,12 +292,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/clipper1.png" alt="" class="rounded-xl">
@@ -300,12 +312,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/evelashes.png" alt="" class="rounded-xl">
@@ -320,12 +332,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Waxstick.png" alt="" class="rounded-xl">
@@ -340,12 +352,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/got2bglue.png" alt="" class="rounded-xl">
@@ -360,12 +372,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/shine and jam.png" alt="" class="rounded-xl">
@@ -380,12 +392,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/tailcomb.png" alt="" class="rounded-xl">
@@ -399,12 +411,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Magictwisthaircurlfoam.png" alt="" class="rounded-xl">
@@ -419,12 +431,12 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="product-card">
                         <div class="border p-2 rounded-xl">
                             <div>
                                 <img src="./src/Men hair cream.png" alt="" class="rounded-xl">
@@ -439,7 +451,7 @@
 
                             <div class="flex justify-center">
                                 <button
-                                    class="border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
+                                    class="buy-btn border px-15 py-1 rounded-full bg-yellow-800 hover:bg-yellow-900 text-white">Buy</button>
                             </div>
                         </div>
                     </div>
@@ -447,6 +459,9 @@
             </div>
         </div>
     </section>
+
+
+    <script src="./Javascript Folders/Shop.js"></script>
 </body>
 
 </html>
