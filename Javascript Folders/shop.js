@@ -62,7 +62,31 @@ function formatMoney(amount) {
     return Number(amount).toLocaleString();
 }
 
-// 1. Render Products onto the HTML grid
+// 1. SCROLL REVEAL OBSERVER
+function setupScrollReveal() {
+    // Select elements with reveal-card OR hardcoded .product-card
+    const cards = document.querySelectorAll(".reveal-card, .product-card");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Reveal the element and animate it up
+                    entry.target.classList.remove("opacity-0", "translate-y-8");
+                    entry.target.classList.add("opacity-100", "translate-y-0");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.1 // Triggers when 10% of element is on screen
+        }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+}
+
+// 2. Render Products onto the HTML grid dynamically (if used)
 function renderProducts(itemsToDisplay) {
     const grid = document.getElementById("productGrid");
     const notFound = document.getElementById("notFoundMessage");
@@ -77,9 +101,9 @@ function renderProducts(itemsToDisplay) {
         if (notFound) notFound.classList.add("hidden");
     }
 
-    itemsToDisplay.forEach(product => {
+    itemsToDisplay.forEach((product) => {
         const card = document.createElement("div");
-        card.className = "border p-2 rounded-xl bg-white/20 flex flex-col justify-between";
+        card.className = "product-card reveal-card opacity-0 translate-y-8 transition-all duration-700 ease-out border p-2 rounded-xl bg-white/20 flex flex-col justify-between";
 
         let hairSelectHTML = '';
         let defaultPrice = product.basePrice;
@@ -126,9 +150,12 @@ function renderProducts(itemsToDisplay) {
 
         grid.appendChild(card);
     });
+
+    // Re-trigger reveal observer for newly rendered cards
+    setupScrollReveal();
 }
 
-// 2. Hair Length Selector: Updates price display based on selected length
+// 3. Hair Length Selector Handler
 function updateHairPrice(event, productId) {
     const selectedPrice = event.target.value;
     const priceDisplay = document.getElementById(`price-${productId}`);
@@ -137,7 +164,7 @@ function updateHairPrice(event, productId) {
     }
 }
 
-// 3. Buy Button Click Handler: Turns button black and renders +/- controls with an OK button
+// 4. Buy Button Click Handler
 function handleBuyClick(button, productId) {
     button.classList.remove("bg-yellow-800", "hover:bg-yellow-900");
     button.classList.add("bg-black");
@@ -163,7 +190,7 @@ function handleBuyClick(button, productId) {
     }, 150);
 }
 
-// 4. Quantity Adjuster
+// 5. Quantity Adjuster
 function changeQty(productId, delta) {
     const qtySpan = document.getElementById(`qty-${productId}`);
     if (!qtySpan) return;
@@ -178,7 +205,7 @@ function changeQty(productId, delta) {
     }
 }
 
-// 5. Add to Cart Confirmation Handler
+// 6. Add to Cart Confirmation Handler
 function addToCart(productId) {
     const actionArea = document.getElementById(`action-area-${productId}`);
     const qtySpan = document.getElementById(`qty-${productId}`);
@@ -192,14 +219,13 @@ function addToCart(productId) {
             </div>
         `;
 
-        // Resets back to original Buy button after 2.5 seconds
         setTimeout(() => {
             resetBuyButton(productId);
         }, 2500);
     }
 }
 
-// Helper: Resets product card back to the original Buy button state
+// Helper: Resets product card back to original Buy button
 function resetBuyButton(productId) {
     const actionArea = document.getElementById(`action-area-${productId}`);
     if (actionArea) {
@@ -214,7 +240,7 @@ function resetBuyButton(productId) {
     }
 }
 
-// 6. Search Bar Filter Handler
+// 7. Search Bar Filter Handler
 function searchProducts() {
     const searchInput = document.getElementById("searchInput");
     if (!searchInput) return;
@@ -234,7 +260,7 @@ function searchProducts() {
     renderProducts(filtered);
 }
 
-// 7. See All Reset Handler
+// 8. See All Reset Handler
 function showAllProducts() {
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
@@ -243,8 +269,14 @@ function showAllProducts() {
     renderProducts(products);
 }
 
-// Automatically load products when page finishes loading
+// Initialize on page load
 document.addEventListener("DOMContentLoaded", () => {
-    renderProducts(products);
+    // Run observer for hardcoded HTML items
+    setupScrollReveal();
+
+    // If using JS rendering, render items dynamically
+    if (document.getElementById("productGrid") && document.getElementById("productGrid").children.length === 0) {
+        renderProducts(products);
+    }
 });
 
