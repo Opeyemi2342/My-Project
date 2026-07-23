@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-[#FAFAF7] text-[#221F1F] min-h-screen flex justify-center items-start pt-6 pb-12 px-4">
+    <div class="w-full max-w-md bg-[#FAFAF7] p-6 relative">
+        <div class="flex justify-between items-start pb-6 border-b border-[#E8E6DF]">
+            <div>
+                <h1 class="font-serif-title text-3xl font-normal text-[#221F1F] tracking-wide">
+                    Schedule Appointment
+                </h1>
+                <p class="text-[11px] font-bold tracking-[0.14em] text-[#C4A482] uppercase mt-1">
+                    Step 2 of 2: Details &amp; Times
+                </p>
+            </div>
+            <a href="BookingCart.html" class="text-[#221F1F] hover:text-black transition-colors p-1" title="Close">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </a>
+        </div>
+
+
+        <form action="./ReservationConfirmed.html" id="appointment-form" class="mt-8 space-y-6">
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Select Practitioner *
+                </label>
+                <div class="relative flex items-center">
+                    <i class="fa-regular fa-user absolute left-4 text-[#A3A09A] text-lg pointer-events-none"></i>
+                    <select id="practitioner"
+                        class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm py-3.5 pl-12 pr-10 appearance-none focus:outline-none focus:border-[#221F1F] transition-colors cursor-pointer">
+                        <option value="lead-stylist">Aaliyah Carter (Master Stylist)</option>
+                        <option value="color-stylist">Elina Logan (Stylist for Silk Press & Color)</option>
+                        <option value="braider">Maya Johnson (Braid Specialist)</option>
+                        <option value="groomer">Marcus Vance (Precision Groomer)</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down absolute right-4 text-xs text-[#A3A09A] pointer-events-none"></i>
+                </div>
+            </div>
+
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Date of Visit *
+                </label>
+                <div class="relative flex items-center">
+                    <i class="fa-regular fa-calendar absolute left-4 text-[#A3A09A] text-lg pointer-events-none"></i>
+                    <input type="date" id="visit-date" required
+                        class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm py-3.5 pl-12 pr-10 appearance-none focus:outline-none focus:border-[#221F1F] transition-colors cursor-pointer" />
+                    <i class="fa-solid fa-chevron-down absolute right-4 text-xs text-[#A3A09A] pointer-events-none"></i>
+                </div>
+            </div>
+
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Preferred Time *
+                </label>
+                <div class="relative flex items-center">
+                    <i class="fa-regular fa-clock absolute left-4 text-[#A3A09A] text-lg pointer-events-none"></i>
+                    <select id="preferred-time"
+                        class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm py-3.5 pl-12 pr-10 appearance-none focus:outline-none focus:border-[#221F1F] transition-colors cursor-pointer">
+                        <option value="09:00">09:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="02:00">02:00 PM</option>
+                        <option value="04:30">04:30 PM</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down absolute right-4 text-xs text-[#A3A09A] pointer-events-none"></i>
+                </div>
+            </div>
+
+            <hr class="border-[#E8E6DF] my-8" />
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Your Full Name *
+                </label>
+                <input type="text" id="full-name" placeholder="e.g. Opeyemi Adegbesan" required
+                    class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm p-3.5 placeholder-[#A3A09A] focus:outline-none focus:border-[#221F1F] transition-colors" />
+            </div>
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Email Address *
+                </label>
+                <input type="email" id="email" placeholder="adegbesanopeyemi55@gmail.com" required
+                    class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm p-3.5 placeholder-[#A3A09A] focus:outline-none focus:border-[#221F1F] transition-colors" />
+            </div>
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Phone Number *
+                </label>
+                <input type="tel" id="phone" placeholder="+234 9029332360" required
+                    class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm p-3.5 placeholder-[#A3A09A] focus:outline-none focus:border-[#221F1F] transition-colors" />
+            </div>
+
+            <div>
+                <label class="block text-[11px] font-bold tracking-[0.12em] text-[#221F1F] uppercase mb-2">
+                    Special Hair Instructions / Hair Texture
+                </label>
+                <textarea rows="3" id="instructions"
+                    placeholder="e.g. 4C curly coily hair, prefer organic oil formulas, hair wash needed, etc."
+                    class="w-full bg-transparent border border-[#E8E6DF] text-[#221F1F] text-sm p-3.5 placeholder-[#A3A09A] focus:outline-none focus:border-[#221F1F] transition-colors resize-none"></textarea>
+            </div>
+
+            <div class="pt-4">
+                <button type="submit"
+                    class="w-full bg-[#1C1A17] hover:bg-black text-white text-xs font-bold tracking-[0.15em] py-4 uppercase transition-all">
+                    Confirm Appointment
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <script src="./Javascript Folders/appointment.js"></script>
+</body>
+
+</html>

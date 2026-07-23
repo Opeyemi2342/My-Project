@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmed</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="bg-[#FAFAF7] text-[#221F1F] min-h-screen flex justify-center items-start pt-6 pb-12 px-4">
+
+  <div class="w-full max-w-md bg-[#FAFAF7] p-6 relative">
+       <div class="flex justify-between items-center pb-6 border-b border-[#E8E6DF]">
+           <h1 class="font-serif-title text-3xl font-normal text-[#221F1F] tracking-wide">
+               Reservation Confirmed
+           </h1>
+
+           <a href="ServicePage.html" class="text-[#221F1F] hover:text-black transition-colors p-1" title="Close">
+              <i class="fa-solid fa-xmark text-2xl"></i>
+           </a>
+       </div>
+
+    
+       <div class="mt-8 text-center">
+           <div class="flex justify-center mb-6">
+               <div class="w-24 h-24 bg-[#F5F2EA] border border-[#E8E6DF] flex items-center justify-center">
+                   <div class="w-12 h-12 rounded-full border-2 border-[#C4A482] flex items-center justify-center text-[#C4A482]">
+                       <i class="fa-solid fa-check text-xl"></i>
+                   </div>
+               </div>
+           </div>
+
+     
+            <h2 class="font-serif-title text-3xl font-normal text-[#221F1F] tracking-wide">
+               Appointment Requested!
+            </h2>
+            <p class="text-[11px] font-bold tracking-[0.14em] text-[#C4A482] uppercase mt-2">
+               Pending Confirmation
+            </p>
+
+     
+            <p class="text-sm text-[#55524D] mt-6 leading-relaxed max-w-sm mx-auto font-sans">
+               We have placed a tentative hold on your selected sessions with 
+              <strong id="confirm-practitioner-header" class="font-semibold text-[#221F1F]">Elina Logan</strong> on 
+              <strong id="confirm-date-header" class="font-semibold text-[#221F1F]">2026-07-20</strong> at 
+               <strong id="confirm-time-header" class="font-semibold text-[#221F1F]">01:30 PM</strong>.
+            </p>
+
+      
+           <div class="mt-8 pt-6 border-t border-[#E8E6DF]">
+               <p class="text-left text-[11px] font-bold tracking-[0.14em] text-[#C4A482] uppercase mb-4">
+                  Booking Details
+               </p>
+
+              <div class="space-y-3 text-sm">
+                   <div class="flex justify-between items-center">
+                       <span class="text-[#55524D]">Guest Name:</span>
+                       <span id="confirm-guest-name" class="font-semibold text-[#221F1F]">Opeyemi Adegbesan</span>
+                   </div>
+                   <div class="flex justify-between items-center">
+                        <span class="text-[#55524D]">Practitioner:</span>
+                        <span id="confirm-practitioner" class="font-semibold text-[#221F1F]">Sasha Sterling</span>
+                   </div>
+                   <div class="flex justify-between items-center">
+                       <span class="text-[#55524D]">Total Fee:</span>
+                       <span id="confirm-total-fee" class="font-serif-title text-base font-normal text-[#221F1F]">&#8358;220,000.00</span>
+                   </div>
+               </div>
+           </div>
+
+           <div class="border-b border-[#E8E6DF] my-6"></div>
+               <p class="text-xs italic text-[#7A7670] leading-relaxed max-w-xs mx-auto mb-8 font-sans">
+               A digital summary has been dispatched to <strong id="confirm-email" class="font-bold text-[#8E860F]">adegbesanopeyemi55@gmail.com</strong>. We will finalize your time slot within 2 hours.
+               </p>
+               <a href="./index.html" class="block w-full bg-[#1C1A17] hover:bg-black text-white text-xs font-bold tracking-[0.15em] py-4 uppercase transition-all text-center">
+                Return to Studio
+               </a>
+
+            </div>
+
+        </div>
+
+  <script src="./Javascript Folders/confirmation.js"></script>
+</body>
+</html>

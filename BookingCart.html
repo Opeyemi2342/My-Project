@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Cart</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-[#FAFAF7] text-[#221F1F] min-h-screen flex justify-center items-start pt-8 pb-12 px-4">
+
+    <div class="w-full max-w-md bg-[#FAFAF7] font-sans p-6">
+
+        <div class="flex gap-3 justify-between items-start pb-6 border-b border-[#E8E6DF]">
+            <div class="flex items-center">
+                <a href="./ServicePage.html" class="text-[#221f1f] hover:text-[#C4A482]transition-colors pr-1" title="Back to Services">
+                    <i class="fa-solid fa-arrow-left text-xl"></i>
+                </a>
+            </div>
+            <div>
+                <h1 class="font-serif-title text-3xl font-normal text-[#221F1F] tracking-wide">
+                    Your Booking Cart
+                </h1>
+                <p class="text-[11px] font-bold tracking-[0.12em] text-[#C4A482] uppercase mt-1">
+                    Step 1 of 2: Selected Services
+                </p>
+            </div>
+            <button class="text-[#221F1F] hover:text-black transition-colors p-1">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="cart-items-container" class="mt-6 space-y-3"></div>
+
+
+
+        <div class="mt-8 border-b border-[#E8E6DF] pb-5 space-y-3">
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-[#55524D]">Subtotal</span>
+
+                <span id="cart-subtotal" class="text-[#221F1F] font-normal">&#8358;0.00</span>
+            </div>
+
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-[#55524D]">Hospitality Fee</span>
+                <span class="text-[#C4A482] font-medium">Complimentary</span>
+            </div>
+        </div>
+
+
+        <div class="flex justify-between items-center my-6">
+            <span class="font-serif-title text-xl text-[#221F1F]">Total Estimated</span>
+
+            <span id="cart-total" class="font-serif-title text-lg text-[#221F1F]">&#8358;0.00</span>
+        </div>
+
+        <div class="mt-8 space-y-6 text-center">
+            <a href="./AppointmentPage.html" class="block w-full text-center text-xs font-bold tracking-[0.15em] py-4 uppercase transition-all bg-[#1C1A17] hover:bg-black text-white">
+                Proceed to scheduling
+            </a>
+
+            <button id="clear-cart-btn"
+                class="text-[11px] font-bold tracking-[0.12em] text-[#A3A09A] hover:text-red-600 uppercase transition-colors">
+                Clear Booking Cart
+            </button>
+        </div>
+
+    </div>
+
+    <script src="./Javascript Folders/cart.js"></script>
+</body>
+
+</html>
