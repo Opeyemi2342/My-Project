@@ -271,6 +271,9 @@
   .end-100 {
     inset-inline-end: calc(var(--spacing) * 100);
   }
+  .-top-3 {
+    top: calc(var(--spacing) * -3);
+  }
   .top-0 {
     top: 0;
   }
@@ -279,6 +282,9 @@
   }
   .top-100 {
     top: calc(var(--spacing) * 100);
+  }
+  .-right-3 {
+    right: calc(var(--spacing) * -3);
   }
   .right-0 {
     right: 0;
@@ -372,6 +378,9 @@
   }
   .col-auto {
     grid-column: auto;
+  }
+  .col-span-full {
+    grid-column: 1 / -1;
   }
   .float-end {
     float: inline-end;
@@ -652,11 +661,17 @@
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
+  .h-68 {
+    height: calc(var(--spacing) * 68);
+  }
   .h-75 {
     height: calc(var(--spacing) * 75);
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
+  }
+  .h-\[18px\] {
+    height: 18px;
   }
   .h-auto {
     height: auto;
@@ -693,6 +708,9 @@
   }
   .w-auto {
     width: auto;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -1098,6 +1116,9 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
+  }
   .bg-stone-300 {
     background-color: var(--color-stone-300);
   }
@@ -1419,6 +1440,9 @@
   .text-\[8px\] {
     font-size: 8px;
   }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
   .text-\[11px\] {
     font-size: 11px;
   }
@@ -1471,20 +1495,8 @@
   .text-\[\#7A7670\] {
     color: #7A7670;
   }
-  .text-\[\#8E86\] {
-    color: #8E86;
-  }
   .text-\[\#8E860F\] {
     color: #8E860F;
-  }
-  .text-\[\#8E860\] {
-    color: #8E860;
-  }
-  .text-\[\#8E\] {
-    color: #8E;
-  }
-  .text-\[\#8\] {
-    color: #8;
   }
   .text-\[\#8b7554\] {
     color: #8b7554;
@@ -1503,9 +1515,6 @@
   }
   .text-\[\#C4A482\] {
     color: #C4A482;
-  }
-  .text-\[\#\] {
-    color: #;
   }
   .text-\[\#c4aa7d\] {
     color: #c4aa7d;
@@ -1820,6 +1829,11 @@
   .md\:ml-50 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 50);
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
     }
   }
   .md\:grid-cols-2 {
