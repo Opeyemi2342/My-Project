@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    
+
     // AUTO-FILTER VIA URL PARAMETER (e.g., ServicePage.html?category=hair-braids)
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get("category");
@@ -49,5 +51,32 @@ document.addEventListener("DOMContentLoaded", () => {
             filterCategory(categoryParam, matchingBtn);
         }
     }
+    
 });
+
+function toggleMobileMenu() {
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const menuIcon =
+        document.getElementById("menuIcon");
+
+
+    mobileMenu.classList.toggle("hidden");
+
+
+    if (mobileMenu.classList.contains("hidden")) {
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    } else {
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+    }
+
+}
 

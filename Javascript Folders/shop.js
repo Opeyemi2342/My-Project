@@ -468,6 +468,33 @@ function showAllProducts() {
     renderProducts(products);
 }
 
+
+function toggleMobileMenu() {
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const menuIcon =
+        document.getElementById("menuIcon");
+
+
+    mobileMenu.classList.toggle("hidden");
+
+
+    if (mobileMenu.classList.contains("hidden")) {
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    } else {
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+    }
+
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     updateCartCount();
